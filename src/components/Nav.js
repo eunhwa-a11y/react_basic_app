@@ -47,7 +47,7 @@ export default class Nav extends Component {
     */
     data.forEach((item)=>{
       list.push(<li key={item.id}><a
-        href="#"
+        href="/"
         onClick={(e)=>{ // a 태그를 클릭했을 때 실행
           e.preventDefault();
           this.props.onChangePage(item.id);
