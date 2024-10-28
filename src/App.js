@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Myheader from './components/Myheader';
 import Nav from './components/Nav';
@@ -30,7 +29,7 @@ class App extends Component {
 
   getReadArticle(){
 
-    const idx = this.state.menus.findIndex(item => item.id == this.state.selected_id);
+    const idx = this.state.menus.findIndex(item => item.id === this.state.selected_id);
     let data = this.state.menus[idx];
     return data;
 
@@ -38,7 +37,7 @@ class App extends Component {
 
   // render 안에 있던 코드를 getArticles 함수 안에 넣음
   getArticles(){
-    let _title, _desc, _article = null; // 기본값은 없다~
+    let _article = null; // 기본값은 없다~
     if(this.state.mode === 'welcome'){
       let _data = this.state.welcome;
       _article = <Article data={_data} mode={this.state.mode}></Article>;
@@ -87,7 +86,7 @@ class App extends Component {
       _article = <UpdateArticle data={_data} onsubmit={(_title, _desc)=>{
 
         let _menus = [...this.state.menus];
-        const idx = this.state.menus.findIndex(item => item.id == this.state.selected_id);
+        const idx = this.state.menus.findIndex(item => item.id === this.state.selected_id);
         _menus[idx] = {id:this.state.selected_id, title:_title, desc:_desc} // 해당 번째 값 수정
         this.setState({
           menus:_menus,
@@ -105,7 +104,7 @@ class App extends Component {
         selected_id는 0으로 변경하고, mode는 welcome으로 변경
         */
         let _menus = [...this.state.menus];
-        let id = this.state.menus.findIndex(item => item.id == this.state.selected_id);
+        let id = this.state.menus.findIndex(item => item.id === this.state.selected_id);
         _menus.splice(id, 1)
   
         this.setState({
