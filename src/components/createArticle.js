@@ -23,7 +23,11 @@ export default class createArticle extends Component {
                   <Form.Label>Description</Form.Label>
                   <Form.Control as="textarea" name="desc" rows={3} />
                 </Form.Group>
-                <Button type="submit" variant="primary">submit</Button>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                  <Form.Label>Difficulty</Form.Label>
+                  <Form.Control type="number" name="difficulty" min="0" max="5" />
+                </Form.Group>
+                <Button type="number" variant="primary">submit</Button>
               </Form>
           </article>
       </section> 
