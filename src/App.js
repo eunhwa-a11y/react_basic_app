@@ -22,7 +22,8 @@ class App extends Component {
       menus:[
         {id:1, title:'HTML', desc:'Hypertext Markup Language'},
         {id:2, title:'CSS', desc:'CSS for design'},
-        {id:3, title:'Javascript', desc:'Javascript for interaction'}
+        {id:3, title:'Javascript', desc:'Javascript for interaction'},
+        {id:3, title:'React', desc:'Single Page Application'}
       ]
     };
   }
